@@ -1,3 +1,3 @@
-#Practice
+#ACCORDION
 
-##This is a practice code for creating an accordion.
+##This a practice code for building an accordion.
