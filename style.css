@@ -1,0 +1,77 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 20px 10px;
+}
+* {
+    box-sizing: border-box;
+}
+
+p {
+    padding: 0;
+    margin-top: 0;
+}
+.accordion__item {
+    border-bottom: 1px solid rgb(225, 225, 251);
+    padding: 10px 0 0 0;
+}
+.accordion__question {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: font-weight 300ms ease-in-out;
+}
+.accordion__question::after {
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    background-image: url('/img/expand-arrow-24.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: transform 250ms ease-in-out;
+} 
+.accordion__question.open {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.accordion__question.open::after {
+    transform: rotate(180deg);
+}
+.accordion__content {
+    word-wrap: break-word;
+    font-size: 1rem;
+   line-height: 1.4;
+   margin-bottom: 1rem;
+}
+.accordion__content p {
+    margin: 0;
+    text-align: left;
+}
+.accordion__collapse {
+    word-wrap: break-word;
+    transition: height 250ms ease-in-out;
+}
+.accordion__collapse.collapse {
+    display: none;
+}
+.accordion__collapse.open {
+    display: block;
+}
+.accordion__collapse.collapsing {
+    height: 0;
+    overflow: hidden;
+}
+ 
